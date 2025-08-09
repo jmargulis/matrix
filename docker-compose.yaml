@@ -106,8 +106,8 @@ services:
         target: /etc/nginx/conf.d/default.conf
       - source: nginx_synapse_client_well_known
         target: /usr/share/nginx/html/.well-known/matrix/client/index.html
-    depends_on:
-      - synapse
+  #   depends_on:
+  #     - synapse
 
   # pgadmin:
   #   image: dpage/pgadmin4
