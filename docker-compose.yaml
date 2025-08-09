@@ -98,13 +98,16 @@ services:
   nginx:
     image: nginx:latest
     restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
     configs:
       - source: nginx_config
         target: /etc/nginx/conf.d/default.conf
       - source: nginx_synapse_client_well_known
         target: /usr/share/nginx/html/.well-known/matrix/client/index.html
-    #ports:
-    #  - "8888:80"
+    depends_on:
+      - synapse
 
   # pgadmin:
   #   image: dpage/pgadmin4
