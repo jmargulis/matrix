@@ -33,7 +33,7 @@ Get started by installing Coolify on your server. For instructions, visit [Cooli
 3. Set **Build Type** to "Docker Compose", leave defaults, and click **Continue**.
 4. Customize the build command to:
    ```bash
-   chmod +x ./scripts/run.sh && ./scripts/run.sh && docker compose -f ./docker-compose.yml build
+   chmod +x ./scripts/run.sh && ./scripts/run.sh && docker compose -f ./docker-compose.yaml build
    ```
    🔧 This script prepares the required configuration files from your `.env` and keeps configurations updated during deployments.
 
