@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#apk add --update nodejs
-apt-get install -y nodejs
+apk update
+apk add --update icu-data-full
+apk add --update nodejs
 
 node ./scripts/index.js
